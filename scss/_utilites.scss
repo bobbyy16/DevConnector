@@ -1,0 +1,153 @@
+.container{
+    max-width: $max-width;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 4rem;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
+// text styles
+
+.x-large{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.large{
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.lead{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-primary{
+    color: $primary-color
+}
+
+.round-image {
+    border-radius: 50%;
+}
+.line{
+    height: 1px;
+    background: #ccc;
+    margin: 1.5rem 1.5rem;
+}
+
+
+// backgrounds
+
+.bg{
+    &-primary{
+        @include set-backgroud($primary-color);
+    }
+    &-dark{
+        @include set-backgroud($dark-color);
+        border:#ccc 1px solid;
+    }
+    &-light{
+        @include set-backgroud($light-color);
+    }
+    &-danger{
+        @include set-backgroud($danger-color);
+    } 
+    &-success{
+        @include set-backgroud($success-color);
+    }
+    &-white{
+        @include set-backgroud(#fff);
+        border:#ccc 1px solid;
+    }
+}
+
+// buttons
+.btn {
+    display: inline-block;
+    background: $light-color;
+    color: #333;
+    padding: 0.4rem 1.3rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: all 0.2s ease-in;
+
+    &.btn-primary {
+        @include set-backgroud($primary-color); 
+        &:hover {
+            background: lighten($color: ($primary-color), $amount: 5%)
+        } 
+    }
+    &.btn-dark {
+        @include set-backgroud($dark-color); 
+        &:hover {
+            background: lighten($color: ($dark-color), $amount: 5%)
+        } 
+    }
+    &.btn-success {
+        @include set-backgroud($success-color); 
+        &:hover {
+            background: lighten($color: ($success-color), $amount: 5%)
+        } 
+    }
+    &.btn-danger {
+        @include set-backgroud($danger-color); 
+        &:hover {
+            background: lighten($color: ($danger-color), $amount: 5%)
+        } 
+    }
+    &:hover{
+        background: lighten($color: ($dark-color), $amount: 20%);
+        color: #fff;
+    }
+}
+
+// badges
+
+.badge {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    text-align: center;
+    margin: .3rem;
+    background: $light-color;
+    color: #333;
+
+    &.badge-primary {
+        @include set-backgroud($primary-color);
+    }
+    &.badge-dark {
+        @include set-backgroud($dark-color);
+    }
+    &.badge-light {
+        @include set-backgroud($light-color);
+    }
+    
+    
+}
+
+// overlay 
+
+.dark-overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0, 0.7) ;
+}
+
+.table {
+    th, 
+    td{
+    padding: 1rem;
+    text-align: left;
+}
+    th{
+        background-color: $light-color;
+    }
+}
